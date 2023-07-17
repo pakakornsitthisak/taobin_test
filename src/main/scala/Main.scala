@@ -1,3 +1,9 @@
+import models.Machine
+import repos.MachineRepository
+import services.{IPublishSubscribeService, PublishSubscribeService}
+import subscribers.{MachineRefillSubscriber, MachineSaleSubscriber}
+import utils.Helper
+
 object Main extends App {
     val machines: List[Machine] = List(
       new Machine("001"), new Machine("002"), new Machine("003")
